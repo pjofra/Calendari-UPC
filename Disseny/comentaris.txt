@@ -1,0 +1,12 @@
+
+- Hi ha una tècnica no mencioanda que és els "custom view". Fer una classe
+  derivada de View i fer almenys el mètode "onDraw". (HorariView).
+
+- Treure botó matí/tarda i posar que el HorariView agafi de 8h a 21h, i utilitzar
+  un ScrollView per si no hi cap a la pantalla.
+
+- Activitat per: 1) filtrar les assignatures + 2) escollir de la llista que surt sota.
+  Quan canvies el filtre de dalt canvia la llista i el filtre es guarda les preferències per
+  la pròxima vegada.
+
+
