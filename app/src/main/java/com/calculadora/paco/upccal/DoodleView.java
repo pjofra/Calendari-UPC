@@ -91,7 +91,7 @@ protected void onLayout(boolean changed, int l, int t, int r, int b) {
         //Let the framework do its thing
         super.dispatchDraw(canvas);
         Paint mGridPaint = new Paint();
-        mGridPaint.setColor(0xFF0000);
+        mGridPaint.setColor(0x00FF00);
         //Draw the grid lines
         for (int i=0; i <= getWidth(); i += (getWidth() / mColumnCount)) {
             canvas.drawLine(i, 0, i, getHeight(), mGridPaint);
