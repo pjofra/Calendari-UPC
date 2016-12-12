@@ -6,28 +6,37 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.view.View;
-
-/**
- * Created by paco on 2/12/16.
- */
-
-public class DoodleView extends View{
+import android.view.ViewGroup;
+import android.widget.EditText;
 
 
+public class DoodleView extends ViewGroup {
+
+    private static final int NUM_FILES = 6;
+    private static final int NUM_COLUMNES = 5;
+    private static final int mColumnCount = 6;
     private Paint _paintDoodle = new Paint ();
 
 
     public DoodleView(Context context) {
-        super(context);
-        init (null, 0);
+       this(context,null, 0);
     }
     public DoodleView (Context context, AttributeSet attrs) {
-        super (context, attrs);
-        init (attrs,0);
-    }
+        this(context, attrs,0);
+     }
     public DoodleView (Context context, AttributeSet attrs, int defStyle){
         super (context, attrs, defStyle);
         init (attrs,defStyle);
+        crearFills(context);
+    }
+
+    private void crearFills(Context context) {
+        for(int f=0; f<NUM_FILES; f++) {
+            for(int c=0; c<NUM_COLUMNES; c++) {
+                EditText e = new EditText(context);
+                addView(e);
+            }
+        }
     }
 
     private void init(AttributeSet attrs, int defStyle){
@@ -36,9 +45,61 @@ public class DoodleView extends View{
     }
 
     @Override
-    public void onDraw (Canvas canvas){
-        super.onDraw(canvas);
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        int widthSize, heightSize;
 
-        canvas.drawLine (0,0, getWidth(),getHeight(), _paintDoodle);
+        //Get the width based on the measure specs
+        widthSize = getDefaultSize(0, widthMeasureSpec);
+
+        //Get the height based on measure specs
+        heightSize = getDefaultSize(0, heightMeasureSpec);
+
+        //això d'aquí a baix el que fa és determinar la mida mínima per fer un quadrat (no necessari)
+
+        //int majorDimension = Math.min(widthSize, heightSize);
+        //Measure all child views
+        //int blockDimension = majorDimension / mColumnCount;
+        //int blockSpec = MeasureSpec.makeMeasureSpec(blockDimension,
+         //       MeasureSpec.EXACTLY);
+        //measureChildren(blockSpec, blockSpec);
+
+        //MUST call this to save our own dimensions
+        setMeasuredDimension(widthSize, heightSize);
+    }
+// aquí intento calcular la mida de les columnes
+@Override
+protected void onLayout(boolean changed, int l, int t, int r, int b) {
+    int row, col, left, top;
+    for (int i=0; i < getChildCount(); i++) {
+        row = i / mColumnCount;
+        col = i % mColumnCount;
+        View child = getChildAt(i);
+        left = col * child.getMeasuredWidth();
+        top = row * child.getMeasuredHeight();
+
+        child.layout(left,
+                top,
+                left + child.getMeasuredWidth(),
+                top + child.getMeasuredHeight());
     }
 }
+
+    //aquesta funció hauria de dibuixar la quadrícula
+
+    @Override
+    protected void dispatchDraw(Canvas canvas) {
+        //Let the framework do its thing
+        super.dispatchDraw(canvas);
+        Paint mGridPaint = new Paint();
+        mGridPaint.setColor(0xFF0000);
+        //Draw the grid lines
+        for (int i=0; i <= getWidth(); i += (getWidth() / mColumnCount)) {
+            canvas.drawLine(i, 0, i, getHeight(), mGridPaint);
+        }
+        for (int i=0; i <= getHeight(); i += (getHeight() / mColumnCount)) {
+            canvas.drawLine(0, i, getWidth(), i, mGridPaint);
+        }
+    }
+}
+
+
