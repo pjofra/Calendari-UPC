@@ -4,4 +4,8 @@
     <string name="button_tools">Tools</string>
     <string name="button_new_subjects">New Subjects</string>
     <string name="horizontal1">Horizontal1</string>
+
+    <string name="title_change">Change Group</string>
+    <string name="title_delete">Delete</string>
+
 </resources>
