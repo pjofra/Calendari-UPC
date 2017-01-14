@@ -27,7 +27,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:id="@+id/tools" />
+        android:id="@+id/reset_button"
+        android:onClick="onClick" />
 
     <view
         android:layout_width="match_parent"

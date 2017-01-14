@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">"UPC Cal "</string>
     <string name="button_new_subject">New Subject</string>
-    <string name="button_tools">Tools</string>
+    <string name="button_tools">Reset</string>
     <string name="button_new_subjects">New Subjects</string>
     <string name="horizontal1">Horizontal1</string>
 
