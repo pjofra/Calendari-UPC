@@ -23,12 +23,12 @@
         android:onClick="newSub" />
 
     <Button
-        android:text="@string/button_tools"
+        android:text="@string/button_reset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:id="@+id/reset_button"
+        android:id="@+id/button_reset"
         android:onClick="reset" />
 
     <view

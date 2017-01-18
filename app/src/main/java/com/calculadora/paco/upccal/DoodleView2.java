@@ -95,10 +95,30 @@ public class DoodleView2 extends ViewGroup implements View.OnClickListener
       caselles[2][2].setText("Mates 1 ");
     }
 
+    /*protected void onCreate(Bundle savedInstanceState) {
+
+
+    Button button_reset = (Button) findViewById(R.id.button_reset);
+
+    button_reset.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        Log.i("S'ha apretat el button:", " reset");
+        caselles[2][2].setBackgroundColor(Color.WHITE);
+        caselles[2][2].setText(" ");
+
+    }
+    });
+    }
+*/
+
+
+
 
     @Override
     public void onClick(View v) {
         Button b = (Button)v;
+        Log.i("button", String.format("Resposta: ", b));
         // variable per aconseguir el text del botó ///// String buttonText = b.getText().toString();
             AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(v.getContext());
 
@@ -109,13 +129,19 @@ public class DoodleView2 extends ViewGroup implements View.OnClickListener
                     .setCancelable(false)
                     .setPositiveButton("Eliminar",new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog,int id) {
-
+                            Log.i("Estem intentant: ", "eliminar assignatura");
+                            Log.i("button", String.format("Resposta: %d", id));
+                            //Estic intentant saber quin button hem clicat pero no hi ha manera
+                            //Aixo dabaix amb el button reset no pero aqui si que funciona ja que estem a la mateixa activitat
+                            //caselles[2][2].setBackgroundColor(Color.WHITE);
+                            //caselles[2][2].setText(" ");
                             //s'ha d'escriure aquí per esborrar assignatura
 
                         }
                     })
                     .setNegativeButton("Canviar",new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog,int id) {
+                            Log.i("Estem intentant: ", "canviar assignatura");
 
                             //s'ha d'escriure aquí per canviar assignatura
 

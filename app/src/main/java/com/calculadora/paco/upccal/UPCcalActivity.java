@@ -21,6 +21,17 @@ public class UPCcalActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_upccal);
+
+
+        Button button_reset = (Button) findViewById(R.id.button_reset);
+
+        button_reset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i("S'ha apretat el button:", " reset");
+                //Aqui funciona ja que en surt a l'android monitor
+            }
+        });
     }
 
     public void newSub (View v) {
@@ -33,7 +44,9 @@ public class UPCcalActivity extends AppCompatActivity {
 
         // aquí hem d'escriure funció per esborrar tota la taula
 
+
     }
+
 
 
 

@@ -7,5 +7,7 @@
 
     <string name="title_change">Change Group</string>
     <string name="title_delete">Delete</string>
+    <string name="button_reset">Reset</string>
+    <string name="button_add">ADD</string>
 
 </resources>
