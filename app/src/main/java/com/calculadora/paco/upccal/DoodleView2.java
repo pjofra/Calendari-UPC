@@ -1,8 +1,13 @@
 package com.calculadora.paco.upccal;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.os.Bundle;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.ContextMenu;
@@ -12,6 +17,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+import android.app.Activity;
+import android.content.DialogInterface;
+import android.view.View.OnClickListener;
 
 /**
  * Created by Roger on 23/12/2016.
@@ -64,8 +73,8 @@ public class DoodleView2 extends ViewGroup implements View.OnClickListener
     }
 
     private void init(AttributeSet attrs, int defStyle){
-//        _paintDoodle.setColor(Color.BLACK);
-//        _paintDoodle.setAntiAlias(true);
+     //  _paintDoodle.setColor(Color.BLACK);
+      //  _paintDoodle.setAntiAlias(true);
     }
 
     private void crearFills(Context context) {
@@ -76,23 +85,62 @@ public class DoodleView2 extends ViewGroup implements View.OnClickListener
                 caselles[f][c].setTextColor(Color.parseColor("white"));
                 //caselles[f][c].setText("hola " + (f*NUM_COLUMNES+c));
                 caselles[f][c].setOnClickListener(this);
-                caselles[f][c].setBackgroundColor(Color.parseColor("#dbdbdb"));
+                //caselles[f][c].setBackgroundColor(Color.parseColor("#dbdbdb"));
                 addView(caselles[f][c]);
             }
         }
-        caselles[1][2].setBackgroundColor(Color.RED);
-        caselles[1][2].setText("Mates 1 ");
+       caselles[1][2].setBackgroundColor(Color.RED);
+       caselles[1][2].setText("Mates 1 ");
         caselles[2][2].setBackgroundColor(Color.RED);
-        caselles[2][2].setText("Mates 1 ");
+      caselles[2][2].setText("Mates 1 ");
     }
 
-    //funció per detectar si funcionaven els butons
+
     @Override
     public void onClick(View v) {
         Button b = (Button)v;
-        Log.i("botons", String.format("Has clicat %s", b.getText().toString()));
-    }
+        // variable per aconseguir el text del botó ///// String buttonText = b.getText().toString();
+            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(v.getContext());
 
+            alertDialogBuilder.setTitle("Què vols fer?");
 
+            alertDialogBuilder
+                    .setMessage("Pots canviar o eliminar l'assignatura o tornar al calendari")
+                    .setCancelable(false)
+                    .setPositiveButton("Eliminar",new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog,int id) {
+
+                            //s'ha d'escriure aquí per esborrar assignatura
+
+                        }
+                    })
+                    .setNegativeButton("Canviar",new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog,int id) {
+
+                            //s'ha d'escriure aquí per canviar assignatura
+
+                        }
+                    })
+                    .setNeutralButton("Sortir",new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog,int id) {
+                            // if this button is clicked, just close
+                            // the dialog box and do nothing
+                            dialog.cancel();
+                        }
+                    });
+
+            // create alert dialog
+            AlertDialog alertDialog = alertDialogBuilder.create();
+
+            // show it
+            alertDialog.show();
+        }
 
 }
+
+    //funció per detectar si funcionaven els butons
+
+
+
+
+
