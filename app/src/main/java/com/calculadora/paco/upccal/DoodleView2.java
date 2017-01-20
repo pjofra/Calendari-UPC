@@ -105,9 +105,9 @@ public class DoodleView2 extends ViewGroup implements View.OnClickListener
         }
     }
 
-    void setEsborrar(int reset) {
+    void setEsborrar(boolean reset) {
 
-        if (reset == 1){
+        if (reset == true){
             for(int f=0; f<NUM_FILES; f++) {
                 for(int c=0; c<NUM_COLUMNES; c++) {
                     caselles[f][c].setBackgroundColor(Color.WHITE);

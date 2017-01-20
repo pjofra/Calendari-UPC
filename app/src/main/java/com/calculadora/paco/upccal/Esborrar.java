@@ -5,18 +5,18 @@ package com.calculadora.paco.upccal;
  */
 
 public class Esborrar {
-    private int reset;
+    private boolean reset;
 
-    public Esborrar(int reset) {
+    public Esborrar(boolean reset) {
         this.reset = reset;
 
     }
 
-    public int getReset() {
+    public boolean getReset() {
         return reset;
     }
 
-    public void setReset(int reset) {
+    public void setReset(boolean reset) {
         this.reset = reset;
     }
 }

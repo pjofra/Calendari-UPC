@@ -30,7 +30,7 @@ public class UPCcalActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Log.i("S'ha apretat el button:", " reset");
                 DoodleView2 doodle_view = (DoodleView2) findViewById(R.id.horari);
-                doodle_view.setEsborrar(1);
+                doodle_view.setEsborrar(true);
                 //Aqui funciona ja que en surt a l'android monitor
             }
         });
