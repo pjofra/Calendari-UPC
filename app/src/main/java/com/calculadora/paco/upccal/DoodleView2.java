@@ -31,8 +31,6 @@ public class DoodleView2 extends ViewGroup implements View.OnClickListener
     private static final int NUM_FILES = 6;
     private static final int NUM_COLUMNES = 5;
 
-    private Paint _paintDoodle = new Paint ();
-
     private Button[][] caselles;
 
     public DoodleView2(Context context) {
@@ -95,6 +93,29 @@ public class DoodleView2 extends ViewGroup implements View.OnClickListener
       caselles[2][2].setText("Mates 1 ");
     }
 
+
+    void setAssignatura(int codi, String nom, int curs, String aula, int[] horaris) {
+        for (int n = 0; n < horaris.length; n++) {
+            int i= 0; // horaris[i]
+            int j = 0;
+            Log.i("valor i", String.valueOf(horaris [0]));
+            Log.i("valor j", String.valueOf(horaris [1]));
+            caselles[horaris [0]][horaris [1]].setBackgroundColor(Color.RED);
+            caselles[horaris [0]][horaris [1]].setText(nom);
+        }
+    }
+
+    void setEsborrar(int reset) {
+
+        if (reset == 1){
+            for(int f=0; f<NUM_FILES; f++) {
+                for(int c=0; c<NUM_COLUMNES; c++) {
+                    caselles[f][c].setBackgroundColor(Color.WHITE);
+        }
+
+        }
+    }}
+
     /*protected void onCreate(Bundle savedInstanceState) {
 
 
@@ -112,14 +133,25 @@ public class DoodleView2 extends ViewGroup implements View.OnClickListener
     }
 */
 
-
-
-
     @Override
     public void onClick(View v) {
         Button b = (Button)v;
+        int i = 0;
+        int j =0;
+        for (int x = 0; x < NUM_FILES; x++) {
+            for (int y = 0; y < NUM_COLUMNES; y++) {
+                if (caselles[x][y] == v) {
+                    i = x;
+                    j = y;
+
+                }
+            }
+        }
+        final int p = i;
+        final int a = j;
+
         Log.i("button", String.format("Resposta: ", b));
-        // variable per aconseguir el text del botó ///// String buttonText = b.getText().toString();
+            // variable per aconseguir el text del botó ///// String buttonText = b.getText().toString();
             AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(v.getContext());
 
             alertDialogBuilder.setTitle("Què vols fer?");
@@ -133,8 +165,9 @@ public class DoodleView2 extends ViewGroup implements View.OnClickListener
                             Log.i("button", String.format("Resposta: %d", id));
                             //Estic intentant saber quin button hem clicat pero no hi ha manera
                             //Aixo dabaix amb el button reset no pero aqui si que funciona ja que estem a la mateixa activitat
-                            //caselles[2][2].setBackgroundColor(Color.WHITE);
-                            //caselles[2][2].setText(" ");
+                            caselles[p][a].setBackgroundColor(Color.WHITE);
+                            caselles[p][a].setText(" ");
+                            //caselles[1][2].setBackgroundColor(Color.WHITE);
                             //s'ha d'escriure aquí per esborrar assignatura
 
                         }
@@ -161,7 +194,6 @@ public class DoodleView2 extends ViewGroup implements View.OnClickListener
             // show it
             alertDialog.show();
         }
-
 }
 
     //funció per detectar si funcionaven els butons

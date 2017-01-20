@@ -17,12 +17,12 @@ public class ConfigAssignatures extends AppCompatActivity {
     private int assignatura1[] = {1, 25, 56, 57};
     
 
-   /* private ArrayList<Object> readList() {
-        ArrayList<Object> assignatura2 = new ArrayList<Object>();
-        assignatura2.add(1);
-        assignatura2.add("Mates");
+    private ArrayList<Assignatura> readList() {
+        ArrayList<Assignatura> assignatura2 = new ArrayList<Assignatura>();
+        assignatura2.add(new Assignatura(0, "Assig1", 5, "H3", new int[]{45, 56, 67}));
+        return null;
 
-    }*/
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +35,7 @@ public class ConfigAssignatures extends AppCompatActivity {
 
         final RadioGroup year = (RadioGroup) findViewById(R.id.year);
 
-        String[] answers = getResources().getStringArray(R.array.year);
+        //String[] answers = getResources().getStringArray(R.array.year);
 
         button_add.setOnClickListener(new View.OnClickListener() {
             @Override
