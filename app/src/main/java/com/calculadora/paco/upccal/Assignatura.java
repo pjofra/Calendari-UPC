@@ -11,11 +11,10 @@ public class Assignatura {
     private String aula;
     private int[]  horaris;
 
-    public Assignatura(int codi, String nom, int curs, String aula, int[] horaris) {
+    public Assignatura(int codi, String nom, int curs, int[] horaris) {
         this.codi = codi;
         this.nom = nom;
         this.curs = curs;
-        this.aula = aula;
         this.horaris = horaris;
     }
 
@@ -41,14 +40,6 @@ public class Assignatura {
 
     public void setCurs(int curs) {
         this.curs = curs;
-    }
-
-    public String getAula() {
-        return aula;
-    }
-
-    public void setAula(String aula) {
-        this.aula = aula;
     }
 
     public int[] getHoraris() {

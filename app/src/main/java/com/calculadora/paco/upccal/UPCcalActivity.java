@@ -36,8 +36,8 @@ public class UPCcalActivity extends AppCompatActivity {
         });
 
         DoodleView2 doodle_view = (DoodleView2) findViewById(R.id.horari);
-        doodle_view.setAssignatura(001, "hola", 1, "210", new int[]{3,3});
-        doodle_view.setAssignatura(002, "adeu", 1, "210", new int[]{4,4});
+        doodle_view.setAssignatura(001, "hola", 1, new int[]{3,3});
+        doodle_view.setAssignatura(002, "adeu", 1, new int[]{4,4});
     }
 
     public void newSub (View v) {

@@ -81,20 +81,18 @@ public class DoodleView2 extends ViewGroup implements View.OnClickListener
             for(int c=0; c<NUM_COLUMNES; c++) {
                 caselles[f][c] = new Button(context, null, android.R.attr.borderlessButtonStyle);
                 caselles[f][c].setTextColor(Color.parseColor("white"));
+                caselles[f][c].setBackgroundColor(Color.WHITE);
                 //caselles[f][c].setText("hola " + (f*NUM_COLUMNES+c));
                 caselles[f][c].setOnClickListener(this);
                 //caselles[f][c].setBackgroundColor(Color.parseColor("#dbdbdb"));
                 addView(caselles[f][c]);
             }
         }
-       caselles[1][2].setBackgroundColor(Color.RED);
-       caselles[1][2].setText("Mates 1 ");
-        caselles[2][2].setBackgroundColor(Color.RED);
-      caselles[2][2].setText("Mates 1 ");
+
     }
 
 
-    void setAssignatura(int codi, String nom, int curs, String aula, int[] horaris) {
+    void setAssignatura(int codi, String nom, int curs, int[] horaris) {
         for (int n = 0; n < horaris.length; n++) {
             int i= 0; // horaris[i]
             int j = 0;
@@ -152,6 +150,7 @@ public class DoodleView2 extends ViewGroup implements View.OnClickListener
 
         Log.i("button", String.format("Resposta: ", b));
             // variable per aconseguir el text del botó ///// String buttonText = b.getText().toString();
+
             AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(v.getContext());
 
             alertDialogBuilder.setTitle("Què vols fer?");

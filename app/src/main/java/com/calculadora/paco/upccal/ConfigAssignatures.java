@@ -19,7 +19,7 @@ public class ConfigAssignatures extends AppCompatActivity {
 
     private ArrayList<Assignatura> readList() {
         ArrayList<Assignatura> assignatura2 = new ArrayList<Assignatura>();
-        assignatura2.add(new Assignatura(0, "Assig1", 5, "H3", new int[]{45, 56, 67}));
+        assignatura2.add(new Assignatura(0, "Assig1", 5, new int[]{45, 56, 67}));
         return null;
 
     }
@@ -43,7 +43,7 @@ public class ConfigAssignatures extends AppCompatActivity {
                 int year_selected = year.getCheckedRadioButtonId();
 
                 Log.i("hem triat el curs:", String.valueOf(year_selected));
-                Log.i("Primera assignatura:", String.valueOf(assignatura1[1]));
+                //Log.i("Primera assignatura:", String.valueOf(assignatura1[1]));
                 //AQUI TREIEM EL ID DEL BUTO DE L'ANY QUE HEM TRIAT, AIXO HO FAREM SERVIR PER DESPRES SELECCIONAR DEL TXT
 
             }
