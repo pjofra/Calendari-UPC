@@ -57,11 +57,12 @@
 </RadioGroup>
 
     <ListView
+        android:id="@+id/listView"
         android:layout_width="match_parent"
-        android:layout_marginTop="65dp"
         android:layout_below="@+id/year"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:layout_alignParentTop="@+id/year"
         android:layout_height="match_parent" />
 
     <Button

@@ -1,27 +1,32 @@
 package com.calculadora.paco.upccal;
 
+import android.graphics.Bitmap;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ConfigAssignatures extends AppCompatActivity {
 
-
     private int ids_years[] = {R.id.year1, R.id.year2, R.id.year3, R.id.year4};
 
-
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_config_assignatures);
 
-
+        populateListView();
 
         Button button_add = (Button) findViewById(R.id.button_add);
 
@@ -42,6 +47,18 @@ public class ConfigAssignatures extends AppCompatActivity {
         });
     }
 
+    private void registerClickCallback() {
+    }
 
+    private void populateListView() {
+
+        String[] myItems = {"Materials", "Mates", "PMA", "Fluids", "Maretials", "Mates", "Resis", "Elasticitat", "Termo"};
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.da_item, myItems);
+
+        ListView list = (ListView) findViewById(R.id.listView);
+        list.setAdapter(adapter);
+    }
 
 }
+
