@@ -14,15 +14,7 @@ public class ConfigAssignatures extends AppCompatActivity {
 
 
     private int ids_years[] = {R.id.year1, R.id.year2, R.id.year3, R.id.year4};
-    private int assignatura1[] = {1, 25, 56, 57};
-    
 
-    private ArrayList<Assignatura> readList() {
-        ArrayList<Assignatura> assignatura2 = new ArrayList<Assignatura>();
-        assignatura2.add(new Assignatura(0, "Assig1", 5, new int[]{45, 56, 67}));
-        return null;
-
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
