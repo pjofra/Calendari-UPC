@@ -96,10 +96,11 @@ public class DoodleView2 extends ViewGroup implements View.OnClickListener
         for (int n = 0; n < horaris.length; n++) {
             int i= 0; // horaris[i]
             int j = 0;
-            Log.i("valor i", String.valueOf(horaris [0]));
-            Log.i("valor j", String.valueOf(horaris [1]));
+            //Log.i("valor i", String.valueOf(horaris [0]));
+            //Log.i("valor j", String.valueOf(horaris [1]));
             caselles[horaris [0]][horaris [1]].setBackgroundColor(Color.RED);
             caselles[horaris [0]][horaris [1]].setText(nom);
+
         }
     }
 
