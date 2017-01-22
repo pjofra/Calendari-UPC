@@ -91,10 +91,19 @@ public class DoodleView2 extends ViewGroup implements View.OnClickListener
 
 
     void setAssignatura(int codi, String nom, int curs, int[] horaris) {
+
         for (int n = 0; n < horaris.length; n++) {
             int i= 0; // horaris[i]
             int j = 0;
-            caselles[horaris [0]][horaris [1]].setBackgroundColor(Color.RED);
+            if (codi == 1){caselles[horaris [0]][horaris [1]].setBackgroundColor(Color.RED);}
+            if (codi == 2){caselles[horaris [0]][horaris [1]].setBackgroundColor(Color.RED);}
+            if (codi == 3){caselles[horaris [0]][horaris [1]].setBackgroundColor(Color.BLUE);}
+            if (codi == 4){caselles[horaris [0]][horaris [1]].setBackgroundColor(Color.BLUE);}
+            if (codi == 5){caselles[horaris [0]][horaris [1]].setBackgroundColor(Color.GREEN);}
+            if (codi == 6){caselles[horaris [0]][horaris [1]].setBackgroundColor(Color.GREEN);}
+            //Log.i("Valor de n", String.valueOf(codi));
+
+
             caselles[horaris [0]][horaris [1]].setText(nom);
             caselles[horaris [0]][horaris [1]].setHintTextColor(0);
             //int aux = caselles[horaris [0]][horaris [1]].getCurrentHintTextColor();
