@@ -180,6 +180,8 @@ public class DoodleView2 extends ViewGroup implements View.OnClickListener
             }
         }
         final int p = i;
+        final int p_aux1 = p+1;
+        final int p_aux2 = p-1;
         final int a = j;
 
         String textexistent = (String) caselles[p][a].getText();
@@ -200,11 +202,21 @@ public class DoodleView2 extends ViewGroup implements View.OnClickListener
                     .setCancelable(false)
                     .setPositiveButton("SI",new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog,int id) {
-                            Log.i("Estem intentant: ", "eliminar assignatura");
+
+                            String text = (String) caselles[p][a].getText();
+                            String textaux1 = (String) caselles[p_aux1][a].getText();
+                            String textaux2 = (String) caselles[p_aux2][a].getText();
+
+                            if (textaux1 == text){
+                                caselles[p_aux1][a].setBackgroundColor(Color.WHITE);
+                                caselles[p_aux1][a].setText(" ");}
+                            else if (textaux2 == text){
+                                caselles[p_aux2][a].setBackgroundColor(Color.WHITE);
+                                caselles[p_aux2][a].setText(" ");}
+
                             caselles[p][a].setBackgroundColor(Color.WHITE);
                             caselles[p][a].setText(" ");
-                            String textC = (String) caselles[p][a].getText();
-                            Log.i(textC, " u");
+
 
 
                         }

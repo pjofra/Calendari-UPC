@@ -45,11 +45,6 @@ public class UPCcalActivity extends AppCompatActivity {
 
     }
 
-    public void newSub (View v) {
-
-        Intent myIntent = new Intent(UPCcalActivity.this, ConfigAssignatures.class);
-        UPCcalActivity.this.startActivity(myIntent);
-    }
 
     public void Termo (View v) {
         DoodleView2 doodle_view = (DoodleView2) findViewById(R.id.horari);
