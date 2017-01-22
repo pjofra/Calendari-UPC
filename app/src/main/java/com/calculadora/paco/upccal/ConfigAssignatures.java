@@ -92,9 +92,15 @@ public class ConfigAssignatures extends AppCompatActivity {
 
 
         String[] myItem = {Assignatura.A1.getNom(), Assignatura.A2.getNom(), Assignatura.A3.getNom(), Assignatura.A4.getNom(), Assignatura.A5.getNom(), Assignatura.A6.getNom(), Assignatura.A7.getNom(),};
+
+        //afegeixo això a veure si funciona
+
+
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.da_item, myItem);
         ListView list = (ListView) findViewById(R.id.listView);
         list.setAdapter(adapter);
+
+
 
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

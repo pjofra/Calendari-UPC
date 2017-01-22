@@ -27,6 +27,7 @@ import android.view.View.OnClickListener;
 
 public class DoodleView2 extends ViewGroup implements View.OnClickListener
 {
+
     private static final int NUM_FILES = 6;
     private static final int NUM_COLUMNES = 5;
 
@@ -181,6 +182,9 @@ public class DoodleView2 extends ViewGroup implements View.OnClickListener
                     .setNegativeButton("Canviar",new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog,int id) {
                             Log.i("Estem intentant: ", "canviar assignatura");
+
+                            Intent i = new Intent (getContext(), ConfigAssignatures.class);
+                            getContext().startActivity(i);
 
 
                         }
