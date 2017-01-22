@@ -101,8 +101,8 @@ public class DoodleView2 extends ViewGroup implements View.OnClickListener
             if (codi == 4){caselles[horaris [0]][horaris [1]].setBackgroundColor(Color.BLUE);}
             if (codi == 5){caselles[horaris [0]][horaris [1]].setBackgroundColor(Color.GREEN);}
             if (codi == 6){caselles[horaris [0]][horaris [1]].setBackgroundColor(Color.GREEN);}
+            if (codi == 7){caselles[horaris [0]][horaris [1]].setBackgroundColor(Color.BLACK);}
             if (codi == 8){caselles[horaris [0]][horaris [1]].setBackgroundColor(Color.BLACK);}
-            if (codi == 9){caselles[horaris [0]][horaris [1]].setBackgroundColor(Color.BLACK);}
             //Log.i("Valor de n", String.valueOf(codi));
             caselles[horaris [0]][horaris [1]].setText(nom);
             caselles[horaris [0]][horaris [1]].setHintTextColor(0);
