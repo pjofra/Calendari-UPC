@@ -50,6 +50,6 @@ public class UPCcalActivity extends AppCompatActivity {
         UPCcalActivity.this.startActivity(myIntent);
 
     }
-    public void addSubject ()
+    //public void addSubject ()
 
 }
