@@ -9,6 +9,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.text.TextPaint;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.ContextMenu;
@@ -79,6 +80,7 @@ public class DoodleView2 extends ViewGroup implements View.OnClickListener
             for(int c=0; c<NUM_COLUMNES; c++) {
                 caselles[f][c] = new Button(context, null, android.R.attr.borderlessButtonStyle);
                 caselles[f][c].setTextColor(Color.parseColor("white"));
+                caselles[f][c].setHintTextColor(2);
                 caselles[f][c].setBackgroundColor(Color.WHITE);
                 caselles[f][c].setOnClickListener(this);
                 addView(caselles[f][c]);
@@ -94,6 +96,12 @@ public class DoodleView2 extends ViewGroup implements View.OnClickListener
             int j = 0;
             caselles[horaris [0]][horaris [1]].setBackgroundColor(Color.RED);
             caselles[horaris [0]][horaris [1]].setText(nom);
+            caselles[horaris [0]][horaris [1]].setHintTextColor(0);
+            //int aux = caselles[horaris [0]][horaris [1]].getCurrentHintTextColor();
+            int aux2 = caselles[0][0].getCurrentHintTextColor();
+            //Log.i("Current text color", String.valueOf(aux));
+           // Log.i("Current text color2", String.valueOf(aux2));
+            //if (aux == 0){Log.i("Intent num", "464860 positiu pel paco");}
 
         }
     }
@@ -126,7 +134,10 @@ public class DoodleView2 extends ViewGroup implements View.OnClickListener
         final int p = i;
         final int a = j;
 
-        Log.i("button", String.format("Resposta: ", b));
+        int aux = caselles[p][a].getCurrentHintTextColor();
+
+        if (aux == 0){
+
             // variable per aconseguir el text del botó ///// String buttonText = b.getText().toString();
 
         //ColorDrawable buttonColor = (ColorDrawable) caselles[p][a].getBackground();
@@ -167,7 +178,7 @@ public class DoodleView2 extends ViewGroup implements View.OnClickListener
 
             // show it
             alertDialog.show();
-        }
+        }}
 }
 
 
