@@ -6,8 +6,10 @@ package com.calculadora.paco.upccal;
 
 public enum Assignatura {
 
+
+
     A1(1, "Mates", 1, new int[]{3,3}),
-    A2(2, "MOP", 1, new int[]{3,4}),
+    A2(2, "Termo", 2, new int[]{1,0}),
     A3(3, "Fluids", 1, new int[]{3,4}),
     A4(4, "Materials", 1, new int[]{3,4}),
     A5(5, "PMA", 1, new int[]{3,4}),

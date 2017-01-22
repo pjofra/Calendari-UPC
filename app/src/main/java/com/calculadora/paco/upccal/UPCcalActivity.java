@@ -36,6 +36,7 @@ public class UPCcalActivity extends AppCompatActivity {
 
         DoodleView2 doodle_view = (DoodleView2) findViewById(R.id.horari);
         doodle_view.setAssignatura(1, "Termo", 1, new int[]{0,0});
+        //doodle_view.setAssignatura(Assignatura.A2.getCodi(), Assignatura.A2.getNom(), Assignatura.A2.getCurs(), Assignatura.A2.getHoraris());
         doodle_view.setAssignatura(2, "Termo", 2, new int[]{1,0});
         doodle_view.setAssignatura(3, "Dibuix",3, new int[]{3,2});
         doodle_view.setAssignatura(4, "Dibuix", 4, new int[]{2,2});

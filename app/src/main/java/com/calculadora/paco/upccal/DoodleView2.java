@@ -181,7 +181,7 @@ public class DoodleView2 extends ViewGroup implements View.OnClickListener
                     .setNegativeButton("Canviar",new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog,int id) {
                             Log.i("Estem intentant: ", "canviar assignatura");
-                            //s'ha d'escriure aquí per cridar a ConfigAssginatura
+
 
                         }
                     })
