@@ -15,27 +15,15 @@ import java.util.ArrayList;
 public class ConfigAssignatures extends AppCompatActivity {
 
 
-    private int ids_years[] = {R.id.year1, R.id.year2, R.id.year3, R.id.year4};
-
-    //public Assignatura assignatura1[] = {1, 25, 56, 57};
+    /*public Assignatura assignatura1[] = {1, 25, 56, 57};
 
 
-    /*private ArrayList<Assignatura> readList() {
+    private ArrayList<Assignatura> readList() {
         ArrayList<Assignatura> assignatura2 = new ArrayList<Assignatura>();
         assignatura2.add(new Assignatura(0, "Assig1", 5, new int[]{45, 56, 67}));
         return null;
-
     }*/
 
-    //private int assignatura1[] = {1, 25, 56, 57};
-
-
-   // private ArrayList<Assignatura> readList() {
-  //      ArrayList<Assignatura> assignatura2 = new ArrayList<Assignatura>();
-    //    assignatura2.add(new Assignatura(0, "Assig1", 5, new int[]{45, 56, 67}));
-     //   return null;
-
-    //}
 
 
     @Override
@@ -45,7 +33,6 @@ public class ConfigAssignatures extends AppCompatActivity {
 
         populateListView();
 
-        //String[] answers = getResources().getStringArray(R.array.year);
     }
 
     public void registerClickCallback() {
@@ -55,7 +42,7 @@ public class ConfigAssignatures extends AppCompatActivity {
         Button button_add = (Button) findViewById(R.id.button_add);
 
         final RadioGroup year = (RadioGroup) findViewById(R.id.year);
-        int ids_years[] = {R.id.year1, R.id.year2, R.id.year3, R.id.year4};
+        //int ids_years[] = {R.id.year1, R.id.year2, R.id.year3, R.id.year4};
         final int[] curs = new int[1];
 
         button_add.setOnClickListener(new View.OnClickListener() {
@@ -63,28 +50,12 @@ public class ConfigAssignatures extends AppCompatActivity {
             public void onClick(View v) {
                 int year_selected = year.getCheckedRadioButtonId();
 
-                //Log.i("hem triat el curs:", String.valueOf(year_selected));
-                //Log.i("Button 1:", String.valueOf(R.id.year1));
-                //Log.i("Button 2:", String.valueOf(R.id.year2));
-                //Log.i("Button 3:", String.valueOf(R.id.year3));
-                //Log.i("Button 4:", String.valueOf(R.id.year4));
-                if (year_selected == R.id.year1)   {
-                    curs[0] = 1;
-                    Log.i("Coincideix amb el curs", String.valueOf(curs[0]));
-                }
-                if (year_selected == R.id.year2)   {
-                    curs[0] = 2;
-                    Log.i("Coincideix amb el curs", String.valueOf(curs[0]));
-                }
-                if (year_selected == R.id.year3)   {
-                    curs[0] = 3;
-                    Log.i("Coincideix amb el curs", String.valueOf(curs[0]));
-                }
-                if (year_selected == R.id.year4)   {
-                    curs[0] =4;
-                    Log.i("Coincideix amb el curs", String.valueOf(curs[0]));
-                }
+                if (R.id.year1 == year_selected)   {curs[0] = 1;}
+                if (R.id.year2 == year_selected)   {curs[0] = 2;}
+                if (R.id.year3 == year_selected)   {curs[0] = 3;}
+                if (R.id.year4 == year_selected)   {curs[0] = 4;}
 
+                Log.i("Coincideix amb el curs", String.valueOf(curs[0]));
             }
         });
 

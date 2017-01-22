@@ -22,9 +22,6 @@ import android.app.Activity;
 import android.content.DialogInterface;
 import android.view.View.OnClickListener;
 
-/**
- * Created by Roger on 23/12/2016.
- */
 
 public class DoodleView2 extends ViewGroup implements View.OnClickListener
 {
@@ -82,9 +79,7 @@ public class DoodleView2 extends ViewGroup implements View.OnClickListener
                 caselles[f][c] = new Button(context, null, android.R.attr.borderlessButtonStyle);
                 caselles[f][c].setTextColor(Color.parseColor("white"));
                 caselles[f][c].setBackgroundColor(Color.WHITE);
-                //caselles[f][c].setText("hola " + (f*NUM_COLUMNES+c));
                 caselles[f][c].setOnClickListener(this);
-                //caselles[f][c].setBackgroundColor(Color.parseColor("#dbdbdb"));
                 addView(caselles[f][c]);
             }
         }
@@ -96,8 +91,6 @@ public class DoodleView2 extends ViewGroup implements View.OnClickListener
         for (int n = 0; n < horaris.length; n++) {
             int i= 0; // horaris[i]
             int j = 0;
-            //Log.i("valor i", String.valueOf(horaris [0]));
-            //Log.i("valor j", String.valueOf(horaris [1]));
             caselles[horaris [0]][horaris [1]].setBackgroundColor(Color.RED);
             caselles[horaris [0]][horaris [1]].setText(nom);
 
@@ -106,7 +99,7 @@ public class DoodleView2 extends ViewGroup implements View.OnClickListener
 
     void setEsborrar(boolean reset) {
 
-        if (reset == true){
+        if (reset){
             for(int f=0; f<NUM_FILES; f++) {
                 for(int c=0; c<NUM_COLUMNES; c++) {
                     caselles[f][c].setBackgroundColor(Color.WHITE);
@@ -114,23 +107,6 @@ public class DoodleView2 extends ViewGroup implements View.OnClickListener
 
         }
     }}
-
-    /*protected void onCreate(Bundle savedInstanceState) {
-
-
-    Button button_reset = (Button) findViewById(R.id.button_reset);
-
-    button_reset.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View v) {
-        Log.i("S'ha apretat el button:", " reset");
-        caselles[2][2].setBackgroundColor(Color.WHITE);
-        caselles[2][2].setText(" ");
-
-    }
-    });
-    }
-*/
 
     @Override
     public void onClick(View v) {
@@ -163,27 +139,20 @@ public class DoodleView2 extends ViewGroup implements View.OnClickListener
                         public void onClick(DialogInterface dialog,int id) {
                             Log.i("Estem intentant: ", "eliminar assignatura");
                             Log.i("button", String.format("Resposta: %d", id));
-                            //Estic intentant saber quin button hem clicat pero no hi ha manera
-                            //Aixo dabaix amb el button reset no pero aqui si que funciona ja que estem a la mateixa activitat
                             caselles[p][a].setBackgroundColor(Color.WHITE);
                             caselles[p][a].setText(" ");
-                            //caselles[1][2].setBackgroundColor(Color.WHITE);
-                            //s'ha d'escriure aquí per esborrar assignatura
-
                         }
                     })
                     .setNegativeButton("Canviar",new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog,int id) {
                             Log.i("Estem intentant: ", "canviar assignatura");
-
-                            //s'ha d'escriure aquí per canviar assignatura
+                            //s'ha d'escriure aquí per cridar a ConfigAssginatura
 
                         }
                     })
                     .setNeutralButton("Sortir",new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog,int id) {
-                            // if this button is clicked, just close
-                            // the dialog box and do nothing
+                            // simplement es tanca
                             dialog.cancel();
                         }
                     });
@@ -196,7 +165,6 @@ public class DoodleView2 extends ViewGroup implements View.OnClickListener
         }
 }
 
-    //funció per detectar si funcionaven els butons
 
 
 
