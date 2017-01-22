@@ -91,7 +91,7 @@ public class ConfigAssignatures extends AppCompatActivity {
             list.setAdapter(adapter);}*/
 
 
-        String[] myItem = {Assignatura.A1.getNom(), Assignatura.A2.getNom(), Assignatura.A3.getNom(), Assignatura.A4.getNom(), Assignatura.A5.getNom(), Assignatura.A6.getNom(), Assignatura.A7.getNom(),};
+        String[] myItem = {Assignatura.A7.getNom(), Assignatura.A8.getNom(), Assignatura.A9.getNom(), Assignatura.A10.getNom(), Assignatura.A11.getNom(), Assignatura.A12.getNom(), Assignatura.A13.getNom(),};
 
         //afegeixo això a veure si funciona
 
@@ -107,10 +107,10 @@ public class ConfigAssignatures extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Log.i("Current position", String.valueOf(position));
 
-                if (position == 1){
+                if (position == 0){
                     DoodleView2 doodle_view = (DoodleView2) findViewById(R.id.horari);
-                    //doodle_view.setAssignatura(Assignatura.A1.getCodi(), Assignatura.A1.getNom(), Assignatura.A1.getCurs(), new int[]{3,3});
-                    doodle_view.setAssignatura(8, "Mates", 1, new int[]{3,3});   }
+                    //doodle_view.setAssignatura(Assignatura.A7.getCodi(), Assignatura.A7.getNom(), Assignatura.A7.getCurs(), Assignatura.A7.getHoraris());
+                    doodle_view.setAssignatura(7, "Mates", 1, new int[]{3,3});   }
             }
         });
 

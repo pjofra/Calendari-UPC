@@ -35,13 +35,13 @@ public class UPCcalActivity extends AppCompatActivity {
         });
 
         DoodleView2 doodle_view = (DoodleView2) findViewById(R.id.horari);
-        doodle_view.setAssignatura(1, "Termo", 1, new int[]{0,0});
-        //doodle_view.setAssignatura(Assignatura.A2.getCodi(), Assignatura.A2.getNom(), Assignatura.A2.getCurs(), Assignatura.A2.getHoraris());
-        doodle_view.setAssignatura(2, "Termo", 2, new int[]{1,0});
-        doodle_view.setAssignatura(3, "Dibuix",3, new int[]{3,2});
-        doodle_view.setAssignatura(4, "Dibuix", 4, new int[]{2,2});
-        doodle_view.setAssignatura(5, "ECO", 5, new int[]{5,4});
-        doodle_view.setAssignatura(6, "ECO", 6, new int[]{4,4});
+        doodle_view.setAssignatura(Assignatura.A1.getCodi(), Assignatura.A1.getNom(), Assignatura.A1.getCurs(), Assignatura.A1.getHoraris());
+        doodle_view.setAssignatura(Assignatura.A2.getCodi(), Assignatura.A2.getNom(), Assignatura.A2.getCurs(), Assignatura.A2.getHoraris());
+        doodle_view.setAssignatura(Assignatura.A3.getCodi(), Assignatura.A3.getNom(), Assignatura.A3.getCurs(), Assignatura.A3.getHoraris());
+        doodle_view.setAssignatura(Assignatura.A4.getCodi(), Assignatura.A4.getNom(), Assignatura.A4.getCurs(), Assignatura.A4.getHoraris());
+        doodle_view.setAssignatura(Assignatura.A5.getCodi(), Assignatura.A5.getNom(), Assignatura.A5.getCurs(), Assignatura.A5.getHoraris());
+        doodle_view.setAssignatura(Assignatura.A6.getCodi(), Assignatura.A6.getNom(), Assignatura.A6.getCurs(), Assignatura.A6.getHoraris());
+        
     }
 
     public void newSub (View v) {
