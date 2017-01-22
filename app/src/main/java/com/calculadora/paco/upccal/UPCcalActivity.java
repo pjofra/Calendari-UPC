@@ -53,7 +53,7 @@ public class UPCcalActivity extends AppCompatActivity {
 
     public void Termo (View v) {
         DoodleView2 doodle_view = (DoodleView2) findViewById(R.id.horari);
-        boolean potsPintar = doodle_view.potsPintar(Assignatura.A4.getCodi(), Assignatura.A4.getNom(), Assignatura.A4.getCurs(), Assignatura.A4.getHoraris());
+        boolean potsPintar = doodle_view.potsPintar(Assignatura.A1.getCodi(), Assignatura.A1.getNom(), Assignatura.A1.getCurs(), Assignatura.A1.getHoraris());
         if (potsPintar){
             AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(v.getContext(),R.style.AlertDialogCustom);
 

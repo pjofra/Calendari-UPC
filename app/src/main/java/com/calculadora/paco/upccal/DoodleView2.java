@@ -128,11 +128,13 @@ public class DoodleView2 extends ViewGroup implements View.OnClickListener
 
 
     boolean potsPintar(int codi, String nom, int curs, int[] horaris) {
-        String textCasella = (String) caselles[horaris [0]][horaris [1]].getText();
+            String textCasella = (String) caselles[horaris [0]][horaris [1]].getText();
             String textCasella2 = (String) caselles[horaris [2]][horaris [3]].getText();
             Log.i(textCasella, " u");
             Log.i(textCasella2, " u");
-          if (textCasella == " " && textCasella2 ==" ") return false;
+          if (textCasella == " " && textCasella2 ==" "  ) {return false;}
+          else if (textCasella == nom || textCasella2 == nom ) {return false;}
+
     return true;}
 
 
