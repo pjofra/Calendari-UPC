@@ -107,7 +107,8 @@ public class ConfigAssignatures extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Log.i("Current position", String.valueOf(position));
 
-
+                UPCcalActivity Activity = new UPCcalActivity();
+                Activity.addSubject(position);
                 if (position == 0){
                     //DoodleView2 doodle_view = (DoodleView2) findViewById(R.id.horari);
                     //doodle_view.setAssignatura(Assignatura.A7.getCodi(), Assignatura.A7.getNom(), Assignatura.A7.getCurs(), Assignatura.A7.getHoraris());

@@ -46,10 +46,16 @@ public class UPCcalActivity extends AppCompatActivity {
     }
 
     public void newSub (View v) {
+
         Intent myIntent = new Intent(UPCcalActivity.this, ConfigAssignatures.class);
         UPCcalActivity.this.startActivity(myIntent);
 
+
     }
-    //public void addSubject ()
+    public void addSubject (int position){
+        DoodleView2 doodle_view = (DoodleView2) findViewById(R.id.horari);
+        doodle_view.setAssignatura(Assignatura.A4.getCodi(), Assignatura.A4.getNom(), Assignatura.A4.getCurs(), Assignatura.A4.getHoraris());
+        Log.i("Lo ha petao", "ole");
+    }
 
 }
