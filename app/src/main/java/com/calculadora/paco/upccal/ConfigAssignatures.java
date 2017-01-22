@@ -111,6 +111,7 @@ public class ConfigAssignatures extends AppCompatActivity {
                     DoodleView2 doodle_view = (DoodleView2) findViewById(R.id.horari);
                     //doodle_view.setAssignatura(Assignatura.A7.getCodi(), Assignatura.A7.getNom(), Assignatura.A7.getCurs(), Assignatura.A7.getHoraris());
                     doodle_view.setAssignatura(7, "Mates", 1, new int[]{3,3});   }
+                
             }
         });
 
