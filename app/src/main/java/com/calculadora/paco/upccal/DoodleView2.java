@@ -7,6 +7,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -127,6 +128,10 @@ public class DoodleView2 extends ViewGroup implements View.OnClickListener
 
         Log.i("button", String.format("Resposta: ", b));
             // variable per aconseguir el text del botó ///// String buttonText = b.getText().toString();
+
+        //ColorDrawable buttonColor = (ColorDrawable) caselles[p][a].getBackground();
+        //int colorID = buttonColor.getColor();
+        //if (colorID == R.color.WHITE) {}
 
             AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(v.getContext());
 

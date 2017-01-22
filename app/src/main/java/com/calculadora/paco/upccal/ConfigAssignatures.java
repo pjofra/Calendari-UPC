@@ -56,16 +56,43 @@ public class ConfigAssignatures extends AppCompatActivity {
                 if (R.id.year4 == year_selected)   {curs[0] = 4;}
 
                 Log.i("Coincideix amb el curs", String.valueOf(curs[0]));
+
             }
         });
 
 
-        String[] myItem = {Assignatura.A1.getNom(), Assignatura.A2.getNom(),Assignatura.A3.getNom(),Assignatura.A4.getNom(),Assignatura.A5.getNom(),Assignatura.A6.getNom(),Assignatura.A7.getNom(),};
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.da_item, myItem);
-
+        if (curs[0] == 1)   { String[] myItem = {Assignatura.A1.getNom(), Assignatura.A2.getNom(),Assignatura.A3.getNom(),};
+            Log.i("hem entrar a l'if del curs", "1");
+         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.da_item, myItem);
         ListView list = (ListView) findViewById(R.id.listView);
-        list.setAdapter(adapter);
+        list.setAdapter(adapter);}
+
+        else { String[] myItem = {Assignatura.A1.getNom(), Assignatura.A2.getNom(),Assignatura.A3.getNom(),Assignatura.A4.getNom(),Assignatura.A5.getNom(),};
+            Log.i("hem entrar a l'if del curs", "15");
+            Log.i("Coincideix amb el curs", String.valueOf(curs[0]));
+            ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.da_item, myItem);
+            ListView list = (ListView) findViewById(R.id.listView);
+            list.setAdapter(adapter);}
+
+
+        if (curs[0] == 2)   {  String[] myItem = {Assignatura.A4.getNom(), Assignatura.A5.getNom(),Assignatura.A6.getNom(),};
+            Log.i("hem entrar a l'if del curs", "2");
+            Log.i("Coincideix amb el curs", String.valueOf(curs[0]));
+            ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.da_item, myItem);
+            ListView list = (ListView) findViewById(R.id.listView);
+            list.setAdapter(adapter);}
+
+        else { String[] myItem = {Assignatura.A1.getNom(), Assignatura.A2.getNom(),Assignatura.A3.getNom(),Assignatura.A4.getNom(),Assignatura.A5.getNom(),};
+            Log.i("hem entrar a l'if del curs", "15");
+            ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.da_item, myItem);
+            ListView list = (ListView) findViewById(R.id.listView);
+            list.setAdapter(adapter);}
+
+        /*
+        String[] myItem = {Assignatura.A1.getNom(), Assignatura.A2.getNom(),Assignatura.A3.getNom(),Assignatura.A4.getNom(),Assignatura.A5.getNom(),Assignatura.A6.getNom(),Assignatura.A7.getNom(),};
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.da_item, myItem);
+        ListView list = (ListView) findViewById(R.id.listView);
+        list.setAdapter(adapter);*/
     }
 
 
