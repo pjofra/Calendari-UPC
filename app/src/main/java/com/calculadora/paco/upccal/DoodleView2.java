@@ -100,8 +100,8 @@ public class DoodleView2 extends ViewGroup implements View.OnClickListener
             if (codi == 1){caselles[horaris [2]][horaris [3]].setBackgroundColor(Color.parseColor("#d98878"));}
             if (codi == 2){caselles[horaris [0]][horaris [1]].setBackgroundColor(Color.parseColor("#f37736"));}
             if (codi == 2){caselles[horaris [2]][horaris [3]].setBackgroundColor(Color.parseColor("#f37736"));}
-            if (codi == 3){caselles[horaris [0]][horaris [1]].setBackgroundColor(Color.parseColor("#7bc043"));}
-            if (codi == 3){caselles[horaris [2]][horaris [3]].setBackgroundColor(Color.parseColor("#7bc043"));}
+            if (codi == 3){caselles[horaris [0]][horaris [1]].setBackgroundColor(Color.parseColor("#89b9bf"));}
+            if (codi == 3){caselles[horaris [2]][horaris [3]].setBackgroundColor(Color.parseColor("#89b9bf"));}
             if (codi == 4){caselles[horaris [0]][horaris [1]].setBackgroundColor(Color.parseColor("#0392cf"));}
             if (codi == 4){caselles[horaris [2]][horaris [3]].setBackgroundColor(Color.parseColor("#0392cf"));}
             if (codi == 5){caselles[horaris [0]][horaris [1]].setBackgroundColor(Color.parseColor("#1b85b8"));}
@@ -116,6 +116,18 @@ public class DoodleView2 extends ViewGroup implements View.OnClickListener
             if (codi == 9){caselles[horaris [2]][horaris [3]].setBackgroundColor(Color.parseColor("#8b9dc3"));}
             if (codi == 10){caselles[horaris [0]][horaris [1]].setBackgroundColor(Color.parseColor("#be29ec"));}
             if (codi == 10){caselles[horaris [2]][horaris [3]].setBackgroundColor(Color.parseColor("#be29ec"));}
+            if (codi == 11){caselles[horaris [0]][horaris [1]].setBackgroundColor(Color.parseColor("#bab725"));}
+            if (codi == 11){caselles[horaris [2]][horaris [3]].setBackgroundColor(Color.parseColor("#bab725"));}
+            if (codi == 12){caselles[horaris [0]][horaris [1]].setBackgroundColor(Color.parseColor("#efef6e"));}
+            if (codi == 12){caselles[horaris [2]][horaris [3]].setBackgroundColor(Color.parseColor("#efef6e"));}
+            if (codi == 13){caselles[horaris [0]][horaris [1]].setBackgroundColor(Color.parseColor("#ad6e9e"));}
+            if (codi == 13){caselles[horaris [2]][horaris [3]].setBackgroundColor(Color.parseColor("#ad6e9e"));}
+            if (codi == 14){caselles[horaris [0]][horaris [1]].setBackgroundColor(Color.parseColor("#ad8a6e"));}
+            if (codi == 14){caselles[horaris [2]][horaris [3]].setBackgroundColor(Color.parseColor("#ad8a6e"));}
+            if (codi == 15){caselles[horaris [0]][horaris [1]].setBackgroundColor(Color.parseColor("#766ead"));}
+            if (codi == 15){caselles[horaris [2]][horaris [3]].setBackgroundColor(Color.parseColor("#766ead"));}
+            if (codi == 16){caselles[horaris [0]][horaris [1]].setBackgroundColor(Color.parseColor("#98dd94"));}
+            if (codi == 16){caselles[horaris [2]][horaris [3]].setBackgroundColor(Color.parseColor("#98dd94"));}
             //Log.i("Valor de n", String.valueOf(codi));
 
             caselles[horaris [0]][horaris [1]].setText(nom);
@@ -128,13 +140,12 @@ public class DoodleView2 extends ViewGroup implements View.OnClickListener
 
 
     boolean potsPintar(int codi, String nom, int curs, int[] horaris) {
-            String textCasella = (String) caselles[horaris [0]][horaris [1]].getText();
+        String textCasella = (String) caselles[horaris [0]][horaris [1]].getText();
             String textCasella2 = (String) caselles[horaris [2]][horaris [3]].getText();
             Log.i(textCasella, " u");
             Log.i(textCasella2, " u");
-          if (textCasella == " " && textCasella2 ==" "  ) {return false;}
-          else if (textCasella == nom || textCasella2 == nom ) {return false;}
-
+          if (textCasella == " " && textCasella2 ==" ") {return false;}
+        else if (textCasella == nom || textCasella2 == nom) {return false;}
     return true;}
 
 

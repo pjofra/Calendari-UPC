@@ -27,7 +27,39 @@
             android:id="@+id/horari"
             android:layout_width="match_parent"
             android:layout_height="400dp"/>
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Primer (Q1)"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:textColor="#e0e0e0"
+            android:background="#4c4c48"
+            android:layout_marginTop="20dp"/>
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/MatesBtn"
+            android:text="Mates"
+            android:onClick="Mates"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/FisicaBtn"
+            android:text="Fisica"
+            android:onClick="Fisica"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/QuimicaBtn"
+            android:text="Química"
+            android:onClick="Quimica"/>
+
+        
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -41,18 +73,24 @@
             android:id="@+id/DibuixBtn"
             android:text="Dibuix"
             android:onClick="Dibuix"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Segon (Q3)"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:textColor="#e0e0e0"
+            android:background="#4c4c48"
+            android:layout_marginTop="10dp"/>
+
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/EcoBtn"
             android:text="Eco"
             android:onClick="Eco"/>
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/MatesBtn"
-            android:text="Mates"
-            android:onClick="Mates"/>
+
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -65,18 +103,30 @@
             android:id="@+id/MaterialsBtn"
             android:text="Material"
             android:onClick="Materials"/>
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/PMABtn"
-            android:text="PMA"
-            android:onClick="PMA"/>
+
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/ResisBtn"
             android:text="Resis"
             android:onClick="Resis"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/SmecBtn"
+            android:text="S. Mec"
+            android:onClick="Mecanica"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tercer (Q5)"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:textColor="#e0e0e0"
+            android:background="#4c4c48"
+            android:layout_marginTop="10dp"/>
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -86,9 +136,44 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/FisicaBtn"
-            android:text="Fisica"
-            android:onClick="Fisica"/>
+            android:id="@+id/GraficaBtn"
+            android:text="Grafica"
+            android:onClick="Grafica"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/TMMBtn"
+            android:text="Maquines i mecanismes"
+            android:onClick="TMM"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Quart (Q7)"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:textColor="#e0e0e0"
+            android:background="#4c4c48"
+            android:layout_marginTop="10dp"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/PMABtn"
+            android:text="Mobils android"
+            android:onClick="PMA"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/CADBtn"
+            android:text="CAD Mecanic"
+            android:onClick="CAD"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/MOPBtn"
+            android:text="Projectes"
+            android:onClick="MOP"/>
+
 
     </LinearLayout>
 

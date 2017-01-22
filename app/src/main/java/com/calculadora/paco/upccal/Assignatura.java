@@ -14,10 +14,17 @@ public enum Assignatura {
     A4(4, "Mates", 1, new int[]{2,0,1,0}),
     A5(5, "Fluids", 1, new int[]{2,4,3,4}),
     A6(6, "Material", 1, new int[]{4,4,5,4}),
-    A7(7, "PMA", 1, new int[]{3,0,4,0}),
-    A8(8, "Resis", 1, new int[]{1,1,2,1}),
+    A7(7, "PMA", 1, new int[]{5,0,4,0}),
+    A8(8, "Resis", 1, new int[]{1,1,0,1}),
     A9(9, "Elas.", 3, new int[]{0,2,1,2}),
-    A10(10, "Fisica", 3, new int[]{4,1,5,1});
+    A10(10, "Fisica", 3, new int[]{4,1,5,1}),
+    A11(11, "Química", 1, new int[]{0,4,1,4}),
+    A12(12, "S. Mec", 3, new int[]{5,0,4,0}),
+    A13(13, "TMM", 3, new int[]{2,1,3,1}),
+    A14(14, "Gràfica", 3, new int[]{0,3,1,3}),
+    A15(15, "CAD", 3, new int[]{2,3,3,3}),
+    A16(16, "MOP", 3, new int[]{4,3,5,3});
+
 
     private int    codi;
     private String nom;
