@@ -1,25 +1,22 @@
 package com.calculadora.paco.upccal;
 
-import android.graphics.Bitmap;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class ConfigAssignatures extends AppCompatActivity {
 
+
     private int ids_years[] = {R.id.year1, R.id.year2, R.id.year3, R.id.year4};
+
     //public Assignatura assignatura1[] = {1, 25, 56, 57};
 
 
@@ -30,8 +27,19 @@ public class ConfigAssignatures extends AppCompatActivity {
 
     }*/
 
+    //private int assignatura1[] = {1, 25, 56, 57};
+
+
+   // private ArrayList<Assignatura> readList() {
+  //      ArrayList<Assignatura> assignatura2 = new ArrayList<Assignatura>();
+    //    assignatura2.add(new Assignatura(0, "Assig1", 5, new int[]{45, 56, 67}));
+     //   return null;
+
+    //}
+
+
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_config_assignatures);
 
@@ -61,13 +69,15 @@ public class ConfigAssignatures extends AppCompatActivity {
 
     public void populateListView() {
 
-        String[] myItems = {"Materials", "Mates", "PMA", "Fluids", "Maretials", "Mates", "Resis", "Elasticitat", "Termo"};
+        Assignatura.A1.getNom();
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.da_item, myItems);
+        String[] myItem = {Assignatura.A1.getNom(), Assignatura.A2.getNom(),Assignatura.A3.getNom(),Assignatura.A4.getNom(),Assignatura.A5.getNom(),Assignatura.A6.getNom(),Assignatura.A7.getNom(),};
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.da_item, myItem);
 
         ListView list = (ListView) findViewById(R.id.listView);
         list.setAdapter(adapter);
     }
 
-}
 
+}
