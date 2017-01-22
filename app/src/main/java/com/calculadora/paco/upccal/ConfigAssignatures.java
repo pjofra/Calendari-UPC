@@ -45,31 +45,49 @@ public class ConfigAssignatures extends AppCompatActivity {
 
         populateListView();
 
+        //String[] answers = getResources().getStringArray(R.array.year);
+    }
+
+    public void registerClickCallback() {
+    }
+    public void populateListView() {
+
         Button button_add = (Button) findViewById(R.id.button_add);
 
         final RadioGroup year = (RadioGroup) findViewById(R.id.year);
-
-        //String[] answers = getResources().getStringArray(R.array.year);
+        int ids_years[] = {R.id.year1, R.id.year2, R.id.year3, R.id.year4};
+        final int[] curs = new int[1];
 
         button_add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 int year_selected = year.getCheckedRadioButtonId();
 
-                Log.i("hem triat el curs:", String.valueOf(year_selected));
-                //Log.i("Primera assignatura:", String.valueOf(assignatura1[1]));
-                //AQUI TREIEM EL ID DEL BUTO DE L'ANY QUE HEM TRIAT, AIXO HO FAREM SERVIR PER DESPRES SELECCIONAR DEL TXT
+                //Log.i("hem triat el curs:", String.valueOf(year_selected));
+                //Log.i("Button 1:", String.valueOf(R.id.year1));
+                //Log.i("Button 2:", String.valueOf(R.id.year2));
+                //Log.i("Button 3:", String.valueOf(R.id.year3));
+                //Log.i("Button 4:", String.valueOf(R.id.year4));
+                if (year_selected == R.id.year1)   {
+                    curs[0] = 1;
+                    Log.i("Coincideix amb el curs", String.valueOf(curs[0]));
+                }
+                if (year_selected == R.id.year2)   {
+                    curs[0] = 2;
+                    Log.i("Coincideix amb el curs", String.valueOf(curs[0]));
+                }
+                if (year_selected == R.id.year3)   {
+                    curs[0] = 3;
+                    Log.i("Coincideix amb el curs", String.valueOf(curs[0]));
+                }
+                if (year_selected == R.id.year4)   {
+                    curs[0] =4;
+                    Log.i("Coincideix amb el curs", String.valueOf(curs[0]));
+                }
 
             }
         });
-    }
 
-    public void registerClickCallback() {
-    }
-
-    public void populateListView() {
-
-        Assignatura.A1.getNom();
 
         String[] myItem = {Assignatura.A1.getNom(), Assignatura.A2.getNom(),Assignatura.A3.getNom(),Assignatura.A4.getNom(),Assignatura.A5.getNom(),Assignatura.A6.getNom(),Assignatura.A7.getNom(),};
 
