@@ -9,5 +9,6 @@
     <string name="title_delete">Delete</string>
     <string name="button_reset">Reset</string>
     <string name="button_add">ADD</string>
+    <string name="refresh">Refresh</string>
 
 </resources>
