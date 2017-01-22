@@ -4,11 +4,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -25,7 +27,6 @@ public class ConfigAssignatures extends AppCompatActivity {
     }*/
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,15 +36,17 @@ public class ConfigAssignatures extends AppCompatActivity {
 
     }
 
-    public void registerClickCallback() {
-    }
+    /*  public void registerClickCallback() {
+      }
+  */
     public void populateListView() {
 
         Button button_add = (Button) findViewById(R.id.button_add);
 
         final RadioGroup year = (RadioGroup) findViewById(R.id.year);
+
         //int ids_years[] = {R.id.year1, R.id.year2, R.id.year3, R.id.year4};
-        final int[] curs = new int[1];
+        /*final int[] curs = new int[1];
 
         button_add.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,11 +92,18 @@ public class ConfigAssignatures extends AppCompatActivity {
             list.setAdapter(adapter);}*/
 
 
-        String[] myItem = {Assignatura.A1.getNom(), Assignatura.A2.getNom(),Assignatura.A3.getNom(),Assignatura.A4.getNom(),Assignatura.A5.getNom(),Assignatura.A6.getNom(),Assignatura.A7.getNom(),};
+        String[] myItem = {Assignatura.A1.getNom(), Assignatura.A2.getNom(), Assignatura.A3.getNom(), Assignatura.A4.getNom(), Assignatura.A5.getNom(), Assignatura.A6.getNom(), Assignatura.A7.getNom(),};
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.da_item, myItem);
         ListView list = (ListView) findViewById(R.id.listView);
         list.setAdapter(adapter);
+
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Log.i("Current position", String.valueOf(position));
+
+            }
+        });
+
     }
-
-
 }
