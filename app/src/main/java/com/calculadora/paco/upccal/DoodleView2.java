@@ -90,37 +90,50 @@ public class DoodleView2 extends ViewGroup implements View.OnClickListener
 
     }
 
-
+    //String textCasella = (String) caselles[2][0].getText();
+    //if (textCasella == "") Log.i(textCasella, " u");
     void setAssignatura(int codi, String nom, int curs, int[] horaris) {
 
         for (int n = 0; n < horaris.length; n++) {
-            int i= 0; // horaris[i]
-            int j = 0;
-            if (codi == 1){caselles[horaris [0]][horaris [1]].setBackgroundColor(Color.RED);}
-            if (codi == 1){caselles[horaris [2]][horaris [3]].setBackgroundColor(Color.RED);}
-            if (codi == 2){caselles[horaris [0]][horaris [1]].setBackgroundColor(Color.BLUE);}
-            if (codi == 2){caselles[horaris [2]][horaris [3]].setBackgroundColor(Color.BLUE);}
-            if (codi == 3){caselles[horaris [0]][horaris [1]].setBackgroundColor(Color.GREEN);}
-            if (codi == 3){caselles[horaris [2]][horaris [3]].setBackgroundColor(Color.GREEN);}
-            if (codi == 4){caselles[horaris [0]][horaris [1]].setBackgroundColor(Color.BLACK);}
+
+            if (codi == 1){caselles[horaris [0]][horaris [1]].setBackgroundColor(Color.parseColor("#d98878"));}
+            if (codi == 1){caselles[horaris [2]][horaris [3]].setBackgroundColor(Color.parseColor("#d98878"));}
+            if (codi == 2){caselles[horaris [0]][horaris [1]].setBackgroundColor(Color.parseColor("#f37736"));}
+            if (codi == 2){caselles[horaris [2]][horaris [3]].setBackgroundColor(Color.parseColor("#f37736"));}
+            if (codi == 3){caselles[horaris [0]][horaris [1]].setBackgroundColor(Color.parseColor("#7bc043"));}
+            if (codi == 3){caselles[horaris [2]][horaris [3]].setBackgroundColor(Color.parseColor("#7bc043"));}
+            if (codi == 4){caselles[horaris [0]][horaris [1]].setBackgroundColor(Color.parseColor("#0392cf"));}
+            if (codi == 4){caselles[horaris [2]][horaris [3]].setBackgroundColor(Color.parseColor("#0392cf"));}
+            if (codi == 5){caselles[horaris [0]][horaris [1]].setBackgroundColor(Color.parseColor("#1b85b8"));}
+            if (codi == 5){caselles[horaris [2]][horaris [3]].setBackgroundColor(Color.parseColor("#1b85b8"));}
+            if (codi == 6){caselles[horaris [0]][horaris [1]].setBackgroundColor(Color.parseColor("#5a5255"));}
+            if (codi == 6){caselles[horaris [2]][horaris [3]].setBackgroundColor(Color.parseColor("#5a5255"));}
+            if (codi == 7){caselles[horaris [0]][horaris [1]].setBackgroundColor(Color.parseColor("#559e83"));}
+            if (codi == 7){caselles[horaris [2]][horaris [3]].setBackgroundColor(Color.parseColor("#559e83"));}
+            if (codi == 8){caselles[horaris [0]][horaris [1]].setBackgroundColor(Color.parseColor("#c3cb71"));}
+            if (codi == 8){caselles[horaris [2]][horaris [3]].setBackgroundColor(Color.parseColor("#c3cb71"));}
+            if (codi == 9){caselles[horaris [0]][horaris [1]].setBackgroundColor(Color.parseColor("#8b9dc3"));}
+            if (codi == 9){caselles[horaris [2]][horaris [3]].setBackgroundColor(Color.parseColor("#8b9dc3"));}
+            if (codi == 10){caselles[horaris [0]][horaris [1]].setBackgroundColor(Color.parseColor("#be29ec"));}
+            if (codi == 10){caselles[horaris [2]][horaris [3]].setBackgroundColor(Color.parseColor("#be29ec"));}
             //Log.i("Valor de n", String.valueOf(codi));
+
             caselles[horaris [0]][horaris [1]].setText(nom);
             caselles[horaris [2]][horaris [3]].setText(nom);
             caselles[horaris [0]][horaris [1]].setHintTextColor(0);
             caselles[horaris [2]][horaris [3]].setHintTextColor(0);
         }
     }
-    /*void setNovaAssignatura(int codi, String nom, int curs, int[] horaris) {
 
-        for (int n = 0; n < horaris.length; n++) {
-            int i= 0; // horaris[i]
-            int j = 0;
-            if (codi == 1){caselles[horaris [0]][horaris [1]].setBackgroundColor(Color.BLACK);}
-            if (codi == 2){caselles[horaris [0]][horaris [1]].setBackgroundColor(Color.BLACK);}
-            caselles[horaris [0]][horaris [1]].setText(nom);
-            caselles[horaris [0]][horaris [1]].setHintTextColor(0);
-        }
-    }*/
+
+
+    boolean potsPintar(int codi, String nom, int curs, int[] horaris) {
+        String textCasella = (String) caselles[horaris [0]][horaris [1]].getText();
+            String textCasella2 = (String) caselles[horaris [2]][horaris [3]].getText();
+            Log.i(textCasella, " u");
+            Log.i(textCasella2, " u");
+          if (textCasella == " " && textCasella2 ==" ") return false;
+    return true;}
 
 
 
@@ -133,6 +146,7 @@ public class DoodleView2 extends ViewGroup implements View.OnClickListener
             for(int f=0; f<NUM_FILES; f++) {
                 for(int c=0; c<NUM_COLUMNES; c++) {
                     caselles[f][c].setBackgroundColor(Color.WHITE);
+                    caselles[f][c].setText(" ");
         }
 
         }
@@ -155,9 +169,8 @@ public class DoodleView2 extends ViewGroup implements View.OnClickListener
         final int p = i;
         final int a = j;
 
-        int aux = caselles[p][a].getCurrentHintTextColor();
-
-        if (aux == 0){
+        String textexistent = (String) caselles[p][a].getText();
+        if (textexistent != " "){
 
             // variable per aconseguir el text del botó ///// String buttonText = b.getText().toString();
 
@@ -167,32 +180,24 @@ public class DoodleView2 extends ViewGroup implements View.OnClickListener
 
             AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(v.getContext());
 
-            alertDialogBuilder.setTitle("Què vols fer?");
+            alertDialogBuilder.setTitle("Vols eliminar l'assignatura?");
 
             alertDialogBuilder
-                    .setMessage("Pots canviar o eliminar l'assignatura o tornar al calendari")
+
                     .setCancelable(false)
-                    .setPositiveButton("Eliminar",new DialogInterface.OnClickListener() {
+                    .setPositiveButton("SI",new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog,int id) {
                             Log.i("Estem intentant: ", "eliminar assignatura");
-                            Log.i("button", String.format("Resposta: %d", id));
-                            DoodleView2 doodle_view = (DoodleView2) findViewById(R.id.horari);
-                            doodle_view.setAssignatura(Assignatura.A4.getCodi(), Assignatura.A4.getNom(), Assignatura.A4.getCurs(), Assignatura.A4.getHoraris());
                             caselles[p][a].setBackgroundColor(Color.WHITE);
                             caselles[p][a].setText(" ");
-
-                        }
-                    })
-                    .setNegativeButton("Canviar",new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog,int id) {
-                            Log.i("Estem intentant: ", "canviar assignatura");
-                            Intent i = new Intent (getContext(), ConfigAssignatures.class);
-                            getContext().startActivity(i);
+                            String textC = (String) caselles[p][a].getText();
+                            Log.i(textC, " u");
 
 
                         }
                     })
-                    .setNeutralButton("Sortir",new DialogInterface.OnClickListener() {
+
+                    .setNeutralButton("NO",new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog,int id) {
                             // simplement es tanca
                             dialog.cancel();

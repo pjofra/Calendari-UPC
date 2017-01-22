@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_upccal"
     android:layout_width="match_parent"
@@ -10,36 +10,86 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.calculadora.paco.upccal.UPCcalActivity">
 
-    <Button
-        android:text="@string/button_new_subjects"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="11dp"
-        android:layout_marginStart="11dp"
-        android:id="@+id/new_subjects"
-        android:onClick="newSub" />
-
-    <Button
-        android:text="@string/button_reset"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:id="@+id/button_reset"
-        android:onClick="reset" />
-
-    <view
-        class="com.calculadora.paco.upccal.DoodleView2"
-        android:id="@+id/horari"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/new_subjects" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
+        <Button
+            android:text="@string/button_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_reset"
+            android:onClick="reset" />
 
+        <view
+            class="com.calculadora.paco.upccal.DoodleView2"
+            android:id="@+id/horari"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"/>
 
-</RelativeLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/TermoBtn"
+            android:text="Termo"
+            android:onClick="Termo"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/DibuixBtn"
+            android:text="Dibuix"
+            android:onClick="Dibuix"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/EcoBtn"
+            android:text="Eco"
+            android:onClick="Eco"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/MatesBtn"
+            android:text="Mates"
+            android:onClick="Mates"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/FluidsBtn"
+            android:text="Fluids"
+            android:onClick="Fluids"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/MaterialsBtn"
+            android:text="Material"
+            android:onClick="Materials"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/PMABtn"
+            android:text="PMA"
+            android:onClick="PMA"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ResisBtn"
+            android:text="Resis"
+            android:onClick="Resis"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ElasticitatBtn"
+            android:text="Elasticitat"
+            android:onClick="Elasticitat"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/FisicaBtn"
+            android:text="Fisica"
+            android:onClick="Fisica"/>
+
+    </LinearLayout>
+
+</ScrollView>
