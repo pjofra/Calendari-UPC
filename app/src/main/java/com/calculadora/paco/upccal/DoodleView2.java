@@ -97,16 +97,17 @@ public class DoodleView2 extends ViewGroup implements View.OnClickListener
             int i= 0; // horaris[i]
             int j = 0;
             if (codi == 1){caselles[horaris [0]][horaris [1]].setBackgroundColor(Color.RED);}
-            if (codi == 2){caselles[horaris [0]][horaris [1]].setBackgroundColor(Color.RED);}
-            if (codi == 3){caselles[horaris [0]][horaris [1]].setBackgroundColor(Color.BLUE);}
-            if (codi == 4){caselles[horaris [0]][horaris [1]].setBackgroundColor(Color.BLUE);}
-            if (codi == 5){caselles[horaris [0]][horaris [1]].setBackgroundColor(Color.GREEN);}
-            if (codi == 6){caselles[horaris [0]][horaris [1]].setBackgroundColor(Color.GREEN);}
-            if (codi == 7){caselles[horaris [0]][horaris [1]].setBackgroundColor(Color.BLACK);}
-            if (codi == 8){caselles[horaris [0]][horaris [1]].setBackgroundColor(Color.BLACK);}
+            if (codi == 1){caselles[horaris [2]][horaris [3]].setBackgroundColor(Color.RED);}
+            if (codi == 2){caselles[horaris [0]][horaris [1]].setBackgroundColor(Color.BLUE);}
+            if (codi == 2){caselles[horaris [2]][horaris [3]].setBackgroundColor(Color.BLUE);}
+            if (codi == 3){caselles[horaris [0]][horaris [1]].setBackgroundColor(Color.GREEN);}
+            if (codi == 3){caselles[horaris [2]][horaris [3]].setBackgroundColor(Color.GREEN);}
+            if (codi == 4){caselles[horaris [0]][horaris [1]].setBackgroundColor(Color.BLACK);}
             //Log.i("Valor de n", String.valueOf(codi));
             caselles[horaris [0]][horaris [1]].setText(nom);
+            caselles[horaris [2]][horaris [3]].setText(nom);
             caselles[horaris [0]][horaris [1]].setHintTextColor(0);
+            caselles[horaris [2]][horaris [3]].setHintTextColor(0);
         }
     }
     /*void setNovaAssignatura(int codi, String nom, int curs, int[] horaris) {
@@ -182,7 +183,6 @@ public class DoodleView2 extends ViewGroup implements View.OnClickListener
                     .setNegativeButton("Canviar",new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog,int id) {
                             Log.i("Estem intentant: ", "canviar assignatura");
-
                             Intent i = new Intent (getContext(), ConfigAssignatures.class);
                             getContext().startActivity(i);
 
