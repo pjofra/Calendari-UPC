@@ -176,8 +176,11 @@ public class DoodleView2 extends ViewGroup implements View.OnClickListener
                         public void onClick(DialogInterface dialog,int id) {
                             Log.i("Estem intentant: ", "eliminar assignatura");
                             Log.i("button", String.format("Resposta: %d", id));
+                            DoodleView2 doodle_view = (DoodleView2) findViewById(R.id.horari);
+                            doodle_view.setAssignatura(Assignatura.A4.getCodi(), Assignatura.A4.getNom(), Assignatura.A4.getCurs(), Assignatura.A4.getHoraris());
                             caselles[p][a].setBackgroundColor(Color.WHITE);
                             caselles[p][a].setText(" ");
+
                         }
                     })
                     .setNegativeButton("Canviar",new DialogInterface.OnClickListener() {

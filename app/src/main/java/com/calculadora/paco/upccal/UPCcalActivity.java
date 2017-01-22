@@ -6,12 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.Context;
-import android.content.DialogInterface;
-import android.view.View.OnClickListener;
+
 
 import static android.provider.AlarmClock.EXTRA_MESSAGE;
 
@@ -57,5 +52,7 @@ public class UPCcalActivity extends AppCompatActivity {
         doodle_view.setAssignatura(Assignatura.A4.getCodi(), Assignatura.A4.getNom(), Assignatura.A4.getCurs(), Assignatura.A4.getHoraris());
         Log.i("Lo ha petao", "ole");
     }
+
+
 
 }
