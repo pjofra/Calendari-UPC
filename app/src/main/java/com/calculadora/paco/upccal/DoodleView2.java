@@ -120,8 +120,8 @@ public class DoodleView2 extends ViewGroup implements View.OnClickListener
             if (codi == 11){caselles[horaris [2]][horaris [3]].setBackgroundColor(Color.parseColor("#bab725"));}
             if (codi == 12){caselles[horaris [0]][horaris [1]].setBackgroundColor(Color.parseColor("#efef6e"));}
             if (codi == 12){caselles[horaris [2]][horaris [3]].setBackgroundColor(Color.parseColor("#efef6e"));}
-            if (codi == 13){caselles[horaris [0]][horaris [1]].setBackgroundColor(Color.parseColor("#ad6e9e"));}
-            if (codi == 13){caselles[horaris [2]][horaris [3]].setBackgroundColor(Color.parseColor("#ad6e9e"));}
+            if (codi == 13){caselles[horaris [0]][horaris [1]].setBackgroundColor(Color.parseColor("#c9aba5"));}
+            if (codi == 13){caselles[horaris [2]][horaris [3]].setBackgroundColor(Color.parseColor("#c9aba5"));}
             if (codi == 14){caselles[horaris [0]][horaris [1]].setBackgroundColor(Color.parseColor("#ad8a6e"));}
             if (codi == 14){caselles[horaris [2]][horaris [3]].setBackgroundColor(Color.parseColor("#ad8a6e"));}
             if (codi == 15){caselles[horaris [0]][horaris [1]].setBackgroundColor(Color.parseColor("#766ead"));}
@@ -191,7 +191,7 @@ public class DoodleView2 extends ViewGroup implements View.OnClickListener
         //int colorID = buttonColor.getColor();
         //if (colorID == R.color.WHITE) {}
 
-            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(v.getContext());
+            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(v.getContext(),R.style.AlertDialog2);
 
             alertDialogBuilder.setTitle("Vols eliminar l'assignatura?");
 
