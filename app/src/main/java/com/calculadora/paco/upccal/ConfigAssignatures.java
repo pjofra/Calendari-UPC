@@ -31,7 +31,6 @@ public class ConfigAssignatures extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_config_assignatures);
-
         populateListView();
 
     }
@@ -63,7 +62,7 @@ public class ConfigAssignatures extends AppCompatActivity {
             }
         });
 
-/*
+
         if (curs[0] == 1)   { String[] myItem = {Assignatura.A1.getNom(), Assignatura.A2.getNom(),Assignatura.A3.getNom(),};
             Log.i("hem entrar a l'if del curs", "1");
          ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.da_item, myItem);
@@ -102,8 +101,13 @@ public class ConfigAssignatures extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Log.i("Current position", String.valueOf(position));
 
+                if (position == 1){
+                    DoodleView2 doodle_view = (DoodleView2) findViewById(R.id.horari);
+                    doodle_view.setAssignatura(8, "Mates", 1, new int[]{3,3});   }
             }
         });
+
+
 
     }
 }
